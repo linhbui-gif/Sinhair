@@ -1,2 +1,9 @@
-mixin listComponent( { className = '', type = '', styleLinkClass, isImage, array = [] } )
-    ul.list-item-group(class=`${className ? className : ''} ${type}`)
+mixin listComponent( { className = '',type = '', link , styleLinkClass, array = [] } )
+    ul.listComponent(class=`${className ? className : ''}${type}`)
+        each item in array 
+            if link 
+                li.listComponent__item 
+                    a(href=`${item.link}` class=`${styleLinkClass ? styleLinkClass : ''} listComponent__item-link`)= item.title
+            else
+                li.listComponent__item
+                    p(class=`${styleLinkClass ? styleLinkClass : ''} listComponent__item-text`)= item.title

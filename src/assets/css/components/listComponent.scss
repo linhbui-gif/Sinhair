@@ -1,3 +1,40 @@
 .listComponent {
-    
+    margin-bottom: 0;
+
+    &.horizon {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        height: 100%;
+
+        &-text {
+            font-size: 14px;
+            font-weight: 400;
+
+            &.white {
+                color: #FFFFFF;
+            }
+        }
+
+        &-link {
+            height: 100%;
+            padding: 0 10px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            overflow: hidden;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &.gray {
+                color: #F2F2F2;
+            }
+        }
+    }
 }

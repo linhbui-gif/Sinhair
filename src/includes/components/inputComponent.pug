@@ -1,2 +1,11 @@
-mixin inputComponent( { className = '', type = '', styleLinkClass, isImage, array = [] } )
-    ul.list-item-group(class=`${className ? className : ''} ${type}`)
+//-   size: 'small' | 'middle' | 'large',
+//-   iconImg: 'true' | 'false',
+
+mixin Input({ className = '', type = 'text', size = 'middle', placeholder = '', iconImg })
+  .Input(class=`${className} ${size}`)
+    if iconImg 
+        .Input-group 
+            img(src=`${iconImg}`, alt="Sinhair").Input-icon
+            input(type=`${type}` placeholder=`${placeholder}`).Input-control
+    else 
+        input(type=`${type}` placeholder=`${placeholder}`).Input-text

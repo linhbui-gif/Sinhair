@@ -1,2 +1,15 @@
-mixin listComponent( { className = '', type = '', styleLinkClass, isImage, array = [] } )
-    ul.list-item-group(class=`${className ? className : ''} ${type}`)
+//- column: row | column
+//- isImage: true | false
+//- type: horizon | not
+
+
+mixin listComponent( { className = '', type = '', styleLinkClass, isImage, array = [], src, column = '' } )
+    ul.list-item(class=`${className ? className : ''} ${type}`)
+        each item in array
+            li.list-item-group(class=`${column}`)
+                if isImage
+                    .img
+                        img(src=`${src}` alt="")
+                    a(href=`${item.link}` class=`${styleLinkClass ? styleLinkClass : ''} list-link`)= item.title
+                else
+                    a(href=`${item.link}` class=`${styleLinkClass ? styleLinkClass : ''} list-link`)= item.title

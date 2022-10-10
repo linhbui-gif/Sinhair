@@ -1,1 +1,49 @@
-mixin cardComponent( { className = '', type = '', styleLinkClass, isImage, array = [] } )
+
+mixin cardComponent({ borderImage,borderCard,className, title, desc, tag , src, circle,hasDescription,styleLinkClass,isImage,price,array = [] })
+    if borderImage
+        .Card-component(class=`${className ? className : className}`)
+            .Card-component-left
+                .Card-component-left-image
+                    a(href="BlogDetail.html" title="")
+                        img(src=`${src}` alt=`${alt ? alt : ''}` class=`${circle ? circle : ''}`)
+            .Card-component-body
+                .Card-component-body-content
+                     h3.Card-component-body-content-title
+                         a(href="#" title="")=title
+                     if hasDescription
+                        p.price=price
+                .Card-component-body-footer
+                   
+                    .Card-footer-times
+                        .times-price
+                           p=price
+                        .times-star
+                            
+                            p.price=4.9
+                            span 
+                                i.fa.fa-star
+    else if borderCard
+        .Card-component(class=`${className ? className : className}`)
+            .Card-component-left
+                .Card-component-left-image
+                    a(href="BlogDetail.html" title="")
+                        img(src=`${src}` alt=`${alt ? alt : ''}` class=`${circle ? circle : ''}`)
+            .Card-component-body
+                .Card-component-body-content
+                     h3.Card-component-body-content-title
+                         a(href="#" title="")=title
+                     p.Card-component-body-content-description=desc
+          
+    else
+        .Card-component(class=`${className ? className : className}`)
+            .Card-component-left
+                .Card-component-left-image
+                    a(href="#" title="")
+                        img(src=`${src}` alt=`${alt ? alt : ''}` class=`${circle ? circle : ''}`)
+            .Card-component-body
+                .Card-component-body-content
+                    h3.Card-component-body-content-title
+                        a(href="#" title="")=title
+                    p.Card-component-body-content-description=desc
+
+    

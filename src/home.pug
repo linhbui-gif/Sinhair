@@ -1,3 +1,35 @@
 extends includes/layouts/Layout.pug
 
 block pages
+    .container 
+        .row 
+            .col-lg-4 
+                  +cardComponent({
+                           className:'borderImage mt-5',
+                           borderImage: true,
+                           
+                           title:'(Sin hair) Dầu gội màu nâu',
+                            price: 350.000,
+                           
+                           src: './assets/images/img1.png'
+                       })
+            .col-lg-4 
+                 +cardComponent({
+                           className:'borderCard mt-5',
+                           
+                           
+                           title:'5000',
+                            desc: 'Khách hàng tin dùng',
+                           
+                           src: './assets/images/img1.png'
+                       })
+            .col-lg-4 
+                +cardComponent({
+                           className:'borderCard mt-5',
+                           borderCard: true,
+                           
+                           title:'Fix là gì? Fix giá là gì? Fix trong mua bán có ý nghĩa gì?',
+                            desc: 'Fix là gì? Thế nào là Fix giá và nó có ý nghĩa gì trong mua bán? Chúng ta hãy cùng đi tìm hiểu qua bài viết sau nhé!',
+                           
+                           src: './assets/images/img1.png'
+                       })

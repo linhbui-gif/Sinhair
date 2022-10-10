@@ -1,2 +1,44 @@
-mixin inputComponent( { className = '', type = '', styleLinkClass, isImage, array = [] } )
-    ul.list-item-group(class=`${className ? className : ''} ${type}`)
+//- input
+//-   1. Có iconImg
+//-       1.1. Trái
+//-       1.2. Phải
+//-   2. Không có iconImg
+//-       2.1. Chỉ mình text
+//-       2.2. Có button
+
+//- const TInputProps = {
+//-   className: string,
+//-   type: 'text'
+//-   size: 'small' | 'middle' | 'large',
+//-   placeholder: string,
+//-   iconImg: true(src) | false,
+//-   reverse: true | false
+//-   horizon: true | false (button)
+//- }
+
+mixin Input({ className = '', type = 'text', size = 'middle', placeholder = '', iconImg, reverse, horizon, title })
+  .Input(class=` ${size}`)
+    if iconImg
+        .Input-group(class=`${className}`)
+          if reverse
+            img(src=`${iconImg}`, alt="Sinhair").Input-icon
+            input(type=`${type}` placeholder=`${placeholder}`).Input-control-reverse
+          else 
+            input(type=`${type}` placeholder=`${placeholder}` class=`${className}`).Input-control
+            img(src=`${iconImg}`, alt="Sinhair").Input-icon
+    else
+      if horizon
+        input(type=`${type}` placeholder=`${placeholder}`).Input-text
+      else
+        
+        if reverse
+          .Input-btn
+            .Input-btn-prepend 
+              button(type='button', class=`${className}`)= title
+            input(type=`${type}` placeholder=`${placeholder}`).Input-text
+        else
+          .Input-btn
+            input(type=`${type}` placeholder=`${placeholder}`).Input-text
+            .Input-btn-prepend 
+              button(type='button', class=`${className}`)= title
+          

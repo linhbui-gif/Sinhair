@@ -1,3 +1,145 @@
-.inpitComponent {
-    
+.Input {
+
+    // position: relative;
+    &-group {
+        // width: 30%;
+        border: 1px solid #BDBDBD;
+        display: flex;
+        align-items: center;
+
+        input {
+            // width: 100%;
+            border-top-style: hidden;
+            border-bottom-style: hidden;
+
+            // background: #C38B20;
+            &.yellow {
+                background: #C38B20;
+            }
+
+            &.white {
+                background: #FFFFFF;
+            }
+
+            height: 20px;
+            font-size: 14px;
+            font-weight: 400;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: #828282;
+            }
+        }
+
+        &.white {
+            background: #FFFFFF;
+        }
+
+        &.yellow {
+            background: #C38B20;
+        }
+
+        .Input-control-reverse {
+            border-right-style: hidden;
+            border-left: 1px solid #E0E0E0;
+        }
+
+        .Input-control {
+            border-left-style: hidden;
+            border-right: 1px solid #E0E0E0;
+        }
+    }
+
+    &-text {
+        // width: 100%;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 12px 13.65px;
+
+        background: #FFFFFF;
+        border: 1px solid #BDBDBD;
+
+        border-radius: 3px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: #828282;
+        }
+    }
+
+    &-btn {
+        display: flex;
+        align-items: center;
+
+        &-prepend {
+
+            // margin-right: -1px;
+            button {
+                font-size: 14px;
+                font-weight: 400;
+                padding: 12px;
+                border: 1px solid gray;
+
+                &.yellow {
+                    background: #C38B20;
+                }
+
+                &.white {
+                    background: #FFFFFF;
+                }
+
+                cursor: pointer;
+            }
+        }
+
+        input {
+            border-radius: 0px;
+        }
+    }
+
+    &.middle {
+        .Input-group {
+            height: 50px;
+            // padding: 16px;
+            border: 1px solid #BDBDBD;
+
+            .Input-icon {
+                padding: 12px;
+            }
+
+            .Input-control-reverse {
+                padding: 16px;
+            }
+
+            .Input-control {
+                padding: 13px;
+            }
+        }
+    }
+
+    &.small {
+        .Input-group {
+            border-radius: 4px;
+            height: 40px;
+
+            .Input-icon {
+                padding: 8px;
+            }
+
+            .Input-control {
+                padding: 13px;
+            }
+
+            .Input-control-reverse {
+                padding: 10px;
+            }
+        }
+    }
+
 }

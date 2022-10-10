@@ -2845,12 +2845,6 @@ html {
 ul {
   list-style: none; }
 
-.text-uppercase {
-  text-transform: uppercase; }
-
-.br-4 {
-  border-radius: 4px; }
-
 a.logo {
   line-height: 45px;
   font-size: 25px;
@@ -3011,6 +3005,12 @@ form input[type="text"], form input[type="number"], form input[type="tel"], form
     -webkit-filter: grayscale(0);
     filter: grayscale(0); }
 
+.text-uppercase {
+  text-transform: uppercase; }
+
+.br-4 {
+  border-radius: 4px; }
+
 .button__control {
   border: none; }
   .button__control:hover {
@@ -3066,6 +3066,83 @@ form input[type="text"], form input[type="number"], form input[type="tel"], form
     font-size: 16px;
     font-weight: 700;
     line-height: 18.75px; }
+
+.Input-group {
+  border: 1px solid #BDBDBD;
+  display: flex;
+  align-items: center; }
+  .Input-group input {
+    border-top-style: hidden;
+    border-bottom-style: hidden;
+    height: 20px;
+    font-size: 14px;
+    font-weight: 400; }
+    .Input-group input.yellow {
+      background: #C38B20; }
+    .Input-group input.white {
+      background: #FFFFFF; }
+    .Input-group input:focus {
+      outline: none; }
+    .Input-group input::placeholder {
+      color: #828282; }
+  .Input-group.white {
+    background: #FFFFFF; }
+  .Input-group.yellow {
+    background: #C38B20; }
+  .Input-group .Input-control-reverse {
+    border-right-style: hidden;
+    border-left: 1px solid #E0E0E0; }
+  .Input-group .Input-control {
+    border-left-style: hidden;
+    border-right: 1px solid #E0E0E0; }
+
+.Input-text {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px 13.65px;
+  background: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  border-radius: 3px; }
+  .Input-text:focus {
+    outline: none; }
+  .Input-text::placeholder {
+    color: #828282; }
+
+.Input-btn {
+  display: flex;
+  align-items: center; }
+  .Input-btn-prepend button {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12px;
+    border: 1px solid gray;
+    cursor: pointer; }
+    .Input-btn-prepend button.yellow {
+      background: #C38B20; }
+    .Input-btn-prepend button.white {
+      background: #FFFFFF; }
+  .Input-btn input {
+    border-radius: 0px; }
+
+.Input.middle .Input-group {
+  height: 50px;
+  border: 1px solid #BDBDBD; }
+  .Input.middle .Input-group .Input-icon {
+    padding: 12px; }
+  .Input.middle .Input-group .Input-control-reverse {
+    padding: 16px; }
+  .Input.middle .Input-group .Input-control {
+    padding: 13px; }
+
+.Input.small .Input-group {
+  border-radius: 4px;
+  height: 40px; }
+  .Input.small .Input-group .Input-icon {
+    padding: 8px; }
+  .Input.small .Input-group .Input-control {
+    padding: 13px; }
+  .Input.small .Input-group .Input-control-reverse {
+    padding: 10px; }
 
 @media (min-width: 992px) {
   .HomeBanner .owl-stage {

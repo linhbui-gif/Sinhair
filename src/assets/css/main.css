@@ -3067,6 +3067,104 @@ form input[type="text"], form input[type="number"], form input[type="tel"], form
     font-weight: 700;
     line-height: 18.75px; }
 
+.border-1 {
+  border: 2px solid #E0E0E0; }
+
+.border-radius-1 {
+  border-radius: 2px; }
+
+.border-radius-3 {
+  border-radius: 6px; }
+
+.fontsize-7 {
+  font-size: 14px; }
+
+.fontsize-8 {
+  font-size: 16px; }
+
+.fontsize-9 {
+  font-size: 18px; }
+
+.fontsize-11 {
+  font-size: 22px; }
+
+.fontweight400 {
+  font-weight: 400; }
+
+.fontweight600 {
+  font-weight: 600; }
+
+.fontweight700 {
+  font-weight: 700; }
+
+.fontweight900 {
+  font-weight: 900; }
+
+.Card-component {
+  background: aqua;
+  border-radius: 6px; }
+  .Card-component-top-image a {
+    text-decoration: none; }
+    .Card-component-top-image a img {
+      width: 100%; }
+  .Card-component-body {
+    margin-top: 10px;
+    padding: 9px 24px 9px 24px; }
+    .Card-component-body-content-title {
+      margin-bottom: 0; }
+      .Card-component-body-content-title a {
+        color: #333333; }
+    .Card-component-body-content-description {
+      line-height: 1.5;
+      margin-bottom: 0; }
+  .Card-component.borderImage {
+    border-radius: 0; }
+    .Card-component.borderImage .Card-component-top {
+      border: 2px solid #E0E0E0;
+      padding: 8px; }
+      @media (max-width: 992px) {
+        .Card-component.borderImage .Card-component-top .Card-component-top-image img {
+          width: 100px;
+          height: 100px; } }
+    .Card-component.borderImage .Card-component-body-footer .Card-footer-information {
+      display: flex;
+      justify-content: space-between; }
+      .Card-component.borderImage .Card-component-body-footer .Card-footer-information .information-price p {
+        color: #C38B20;
+        margin-bottom: 0px; }
+      .Card-component.borderImage .Card-component-body-footer .Card-footer-information .information-star {
+        display: flex; }
+        .Card-component.borderImage .Card-component-body-footer .Card-footer-information .information-star p {
+          margin-right: 8px;
+          color: #333333;
+          margin-bottom: 0; }
+        .Card-component.borderImage .Card-component-body-footer .Card-footer-information .information-star span {
+          display: flex;
+          align-items: baseline; }
+        .Card-component.borderImage .Card-component-body-footer .Card-footer-information .information-star i {
+          margin-top: 5px;
+          color: #C38B20; }
+  .Card-component.borderCard {
+    background-color: #EFEFEF;
+    border-radius: 0; }
+    .Card-component.borderCard .Card-component-top {
+      padding: 8px; }
+      @media (max-width: 992px) {
+        .Card-component.borderCard .Card-component-top .Card-component-top-image img {
+          width: 100px;
+          height: 100px; } }
+    .Card-component.borderCard .Card-component-body {
+      text-align: center;
+      padding-bottom: 21px; }
+      .Card-component.borderCard .Card-component-body-content-title {
+        margin-bottom: 0; }
+        .Card-component.borderCard .Card-component-body-content-title a {
+          color: #333333; }
+      .Card-component.borderCard .Card-component-body-content-description {
+        line-height: 1.5;
+        color: #4F4F4F;
+        margin-bottom: 0; }
+
 .Input-group {
   border: 1px solid #BDBDBD;
   display: flex;

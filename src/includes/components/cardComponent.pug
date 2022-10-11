@@ -1,1 +1,48 @@
-mixin cardComponent( { className = '', type = '', styleLinkClass, isImage, array = [] } )
+mixin cardComponent({ borderImage,borderCard,className, title, desc, tag , src, circle,hasDescription,isImage,price,prices,array = [] })
+    if borderImage
+        .Card-component(class=`${className ? className : className}`)
+            .Card-component-top.border-radius-1
+                .Card-component-top-image
+                    a(href="BlogDetail.html" title="")
+                        img(src=`${src}` alt=`${alt ? alt : ''}` class=`${circle ? circle : ''}`)
+            .Card-component-body
+              
+                .Card-component-body-content
+                     h3.Card-component-body-content-title
+                         a(href="#" title="" class=`${fontsize ? fontsize : ''}${' '}${fontweight ? fontweight : ''}`).fontsize-7.fontweight600=title
+                     if hasDescription
+                        p.price=price
+                .Card-component-body-footer
+                   
+                    .Card-footer-information
+                        .information-price
+                           p.fontsize-7.fontweight400=price
+                        .information-star
+                            
+                            p.fontsize-8.fontweight700=prices
+                            span 
+                                i.fa.fa-star.fontsize-7.fontweight900
+    else if borderCard
+        .Card-component(class=`${className ? className : className}`)
+            .Card-component-top
+                .Card-component-top-image
+                    a(href="BlogDetail.html" title="")
+                        img(src=`${src}` alt=`${alt ? alt : ''}` class=`${circle ? circle : ''}`)
+            .Card-component-body
+                .Card-component-body-content
+                     h3.Card-component-body-content-title()
+                         a(href="#" title="" ).fontsize-11.fontweight900=title
+                     p.Card-component-body-content-description.fontsize-8.fontweight400(class=`${fontsizeDesc ? fontsizeDesc : ''}${' '}${fontweightDesc? fontweightDesc : ''}`)=desc
+          
+    else
+        .Card-component.border-radius-3(class=`${className ? className : className}`)
+            .Card-component-top
+                .Card-component-top-image
+                    a(href="#" title="")
+                        img(src=`${src}` alt=`${alt ? alt : ''}` class=`${circle ? circle : ''}`)
+            .Card-component-body
+                .Card-component-body-content
+                    h3.Card-component-body-content-title
+                        a(href="#" title="").fontsize-9.fontweight700=title
+                    p.Card-component-body-content-description.fontsize-8.fontweight400=desc
+

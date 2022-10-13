@@ -3067,82 +3067,100 @@ form input[type="text"], form input[type="number"], form input[type="tel"], form
     font-weight: 700;
     line-height: 18.75px; }
 
-.Input-group {
-  border: 1px solid #BDBDBD;
-  display: flex;
-  align-items: center; }
-  .Input-group input {
-    border-top-style: hidden;
-    border-bottom-style: hidden;
-    height: 20px;
-    font-size: 14px;
-    font-weight: 400; }
-    .Input-group input.yellow {
-      background: #C38B20; }
-    .Input-group input.white {
-      background: #FFFFFF; }
-    .Input-group input:focus {
-      outline: none; }
-    .Input-group input::placeholder {
-      color: #828282; }
-  .Input-group.white {
-    background: #FFFFFF; }
-  .Input-group.yellow {
-    background: #C38B20; }
-  .Input-group .Input-control-reverse {
-    border-right-style: hidden;
-    border-left: 1px solid #E0E0E0; }
-  .Input-group .Input-control {
-    border-left-style: hidden;
-    border-right: 1px solid #E0E0E0; }
-
-.Input-text {
-  font-size: 14px;
+.font-placeholder {
   font-weight: 400;
-  padding: 12px 13.65px;
-  background: #FFFFFF;
-  border: 1px solid #BDBDBD;
+  font-size: 14px; }
+
+.border-radius-1 {
   border-radius: 3px; }
-  .Input-text:focus {
-    outline: none; }
-  .Input-text::placeholder {
-    color: #828282; }
 
-.Input-btn {
-  display: flex;
-  align-items: center; }
-  .Input-btn-prepend button {
-    font-size: 14px;
-    font-weight: 400;
-    padding: 12px;
-    border: 1px solid gray;
-    cursor: pointer; }
-    .Input-btn-prepend button.yellow {
-      background: #C38B20; }
-    .Input-btn-prepend button.white {
-      background: #FFFFFF; }
-  .Input-btn input {
-    border-radius: 0px; }
+.border-radius-2 {
+  border-radius: 6px; }
 
-.Input.middle .Input-group {
-  height: 50px;
+.border-gray {
   border: 1px solid #BDBDBD; }
-  .Input.middle .Input-group .Input-icon {
-    padding: 12px; }
-  .Input.middle .Input-group .Input-control-reverse {
-    padding: 16px; }
-  .Input.middle .Input-group .Input-control {
-    padding: 13px; }
 
-.Input.small .Input-group {
-  border-radius: 4px;
-  height: 40px; }
-  .Input.small .Input-group .Input-icon {
-    padding: 8px; }
-  .Input.small .Input-group .Input-control {
-    padding: 13px; }
-  .Input.small .Input-group .Input-control-reverse {
-    padding: 10px; }
+.input-component {
+  background: var(--color-white);
+  padding-left: 13px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-shadow: 0px 5px 15px rgba(50, 120, 175, 0.13);
+  color: var(--color-secondary);
+  outline: none;
+  border: unset; }
+  .input-component:focus {
+    outline: none; }
+  .input-component.small {
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px; }
+
+.input-icon {
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 18px;
+  color: var(--color-secondary); }
+  .input-icon img {
+    padding-right: 12px; }
+  .input-icon-control {
+    padding-left: 16px;
+    outline: none;
+    border-bottom: unset;
+    border-top: unset;
+    border-right: unset;
+    border-left: 1px solid #E0E0E0; }
+    .input-icon-control:focus {
+      outline: none; }
+  .input-icon.reverse {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-right: 16px;
+    justify-content: space-between; }
+    .input-icon.reverse img {
+      padding-right: 0;
+      padding-left: 12px;
+      border-left: 1px solid #E0E0E0; }
+    .input-icon.reverse .input-icon-control {
+      border: unset;
+      padding-left: 0; }
+  .input-icon.small {
+    padding-top: 11px;
+    padding-left: 14px;
+    padding-bottom: 13px; }
+
+.input-btn {
+  background: var(--color-white);
+  color: var(--color-secondary);
+  outline: none;
+  border: 1px solid #E0E0E0;
+  background: white; }
+  .input-btn button {
+    height: 100%;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: unset;
+    background: var(--black);
+    color: white; }
+    .input-btn button.yellow {
+      background: #C38B20; }
+  .input-btn .input-text {
+    border: unset;
+    outline: none;
+    padding-left: 16px; }
+    .input-btn .input-text:focus {
+      outline: none; }
+  .input-btn.reverse {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between; }
+
+.input-number input {
+  outline: none; }
 
 @media (min-width: 992px) {
   .HomeBanner .owl-stage {

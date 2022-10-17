@@ -3179,6 +3179,63 @@ form input[type="text"], form input[type="number"], form input[type="tel"], form
       color: #C38B20;
       transition: 0.7s; }
 
+#buttonArrow {
+  padding: 20px; }
+  #buttonArrow .owl-nav button {
+    background-color: #F3F3F3;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+    #buttonArrow .owl-nav button.owl-prev {
+      left: -6%; }
+    #buttonArrow .owl-nav button.owl-next {
+      right: -6%; }
+  #buttonArrow .owl-nav:hover button {
+    opacity: 1; }
+  #buttonArrow .Card-carousel {
+    background-color: antiquewhite;
+    padding: 20px;
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.07);
+    border-radius: 10px; }
+    #buttonArrow .Card-carousel .Card-carousel-top {
+      display: flex; }
+      #buttonArrow .Card-carousel .Card-carousel-top-image {
+        margin-right: 11px; }
+      #buttonArrow .Card-carousel .Card-carousel-top-info {
+        margin-top: 11px; }
+        #buttonArrow .Card-carousel .Card-carousel-top-info p {
+          margin-bottom: 0; }
+        #buttonArrow .Card-carousel .Card-carousel-top-info span {
+          background-color: #FFF0BF;
+          border-radius: 3px;
+          margin-right: 2px; }
+          #buttonArrow .Card-carousel .Card-carousel-top-info span i {
+            color: #F2CE54; }
+    #buttonArrow .Card-carousel .Card-carousel-body-Desc .content-description {
+      font-size: 14px;
+      font-weight: 400; }
+
+#hasDots {
+  padding-top: 91px;
+  padding-left: 150px;
+  padding-right: 826px;
+  background-image: url("../images/slider1.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #hasDots .owl-dots {
+    padding: 3px 0;
+    width: 90px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.11);
+    border-radius: 100px; }
+  #hasDots .owl-dot.active span {
+    background: white;
+    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15); }
+
 @media (min-width: 992px) {
   .HomeBanner .owl-stage {
     margin-left: -1px; } }

@@ -1,0 +1,38 @@
+mixin carouselComponent({className,src,alt,hasButtonArrow,hasDots,title,titleName,desc,circle,titleh1,titleh2,content,readmore,array=[1,2,3,4,5,6,7,8],array2=[1,2,3]})
+    if hasButtonArrow 
+        #buttonArrow.owl-carousel.owl-theme
+            each item in array
+                .Card-carousel(class=`${className ? className : className}`)
+                    .Card-carousel-top
+                        .Card-carousel-top-image
+                            a(href="#" title="")
+                                img(src=`${src}` alt=`${alt ? alt : ''}` class=`${circle ? circle : ''}`)
+                        .Card-carousel-top-info
+                            p.titleName=titleName 
+                            .infor-star 
+                            span 
+                                i.fa.fa-star
+                            span 
+                                i.fa.fa-star
+                            span 
+                                i.fa.fa-star
+                            span 
+                                i.fa.fa-star
+                            span 
+                                i.fa.fa-star
+                    .Card-carousel-body
+                        .Card-carousel-body-Desc
+                           
+                            p.content-description(class=`${fontsizeDesc ? fontsizeDesc : ''}${' '}${fontweightDesc ? fontweightDesc : ''}`)=desc
+    else if hasDots
+        #hasDots.owl-carousel.owl-theme
+            each item in array2
+              .news-content 
+                    h2=titleh2
+                    h1=titleh1
+                    p=content
+                    p=readmore
+    else 
+        #default.owl-carousel.owl-theme
+            each item in array
+                img(src=`${src}`, alt=`${alt}`)

@@ -1,0 +1,10 @@
+extends includes/layouts/Layout.pug
+
+block pages
+    +inputComponent({className: 'border-radius-1 font-placeholder', placeholder: 'Nhập email đăng ký'})
+
+    +inputComponent({className: 'border-gray font-placeholder reverse', placeholder: 'Nhập email đăng ký', icon: '../assets/icons/box.svg'})
+
+    +inputComponent({className: 'font-placeholder yellow reverse', placeholder: 'Nhập email đăng ký', button: true, title: 'Button'})
+
+    +inputComponent({className: 'font-placeholder yellow', type: 'number', number:true, min: '1', max: '5'})

@@ -2,6 +2,8 @@
 //- include ../containers/Country
 //include ../containers/ProfileCard.pug
 //include ../containers/ProfileCardMobile.pug
+include ../components/inputComponent.pug
+include ../components/listComponent.pug
 
 include ../components/buttonComponent.pug
 doctype html
@@ -29,7 +31,7 @@ html
         include Navigation.pug
         main
           block pages
-        +buttonComponent({className:'primary',size:'btn-w100',title:'đăng ký ngay',classCustom:'text-uppercase'})
+        
           
         include Footer.pug
         //- Java Script

@@ -3067,100 +3067,117 @@ form input[type="text"], form input[type="number"], form input[type="tel"], form
     font-weight: 700;
     line-height: 18.75px; }
 
-.font-placeholder {
-  font-weight: 400;
-  font-size: 14px; }
+.font-weight {
+  font-weight: 400; }
 
-.border-radius-1 {
-  border-radius: 3px; }
-
-.border-radius-2 {
-  border-radius: 6px; }
-
-.border-gray {
-  border: 1px solid #BDBDBD; }
-
-.input-component {
-  background: var(--color-white);
-  padding-left: 13px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  box-shadow: 0px 5px 15px rgba(50, 120, 175, 0.13);
-  color: var(--color-secondary);
-  outline: none;
-  border: unset; }
-  .input-component:focus {
-    outline: none; }
-  .input-component.small {
-    padding-left: 10px;
-    padding-top: 8px;
-    padding-bottom: 8px; }
-
-.input-icon {
-  padding-top: 16px;
-  padding-left: 16px;
-  padding-bottom: 18px;
-  color: var(--color-secondary); }
-  .input-icon img {
-    padding-right: 12px; }
-  .input-icon-control {
-    padding-left: 16px;
-    outline: none;
-    border-bottom: unset;
-    border-top: unset;
-    border-right: unset;
-    border-left: 1px solid #E0E0E0; }
-    .input-icon-control:focus {
-      outline: none; }
-  .input-icon.reverse {
+.listComponent {
+  margin: 0;
+  position: relative; }
+  .listComponent.reverse {
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;
-    padding-right: 16px;
     justify-content: space-between; }
-    .input-icon.reverse img {
-      padding-right: 0;
-      padding-left: 12px;
-      border-left: 1px solid #E0E0E0; }
-    .input-icon.reverse .input-icon-control {
-      border: unset;
-      padding-left: 0; }
-  .input-icon.small {
-    padding-top: 11px;
-    padding-left: 14px;
-    padding-bottom: 13px; }
-
-.input-btn {
-  background: var(--color-white);
-  color: var(--color-secondary);
-  outline: none;
-  border: 1px solid #E0E0E0;
-  background: white; }
-  .input-btn button {
-    height: 100%;
-    padding-left: 13px;
-    padding-right: 13px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border: unset;
-    background: var(--black);
-    color: white; }
-    .input-btn button.yellow {
-      background: #C38B20; }
-  .input-btn .input-text {
-    border: unset;
-    outline: none;
-    padding-left: 16px; }
-    .input-btn .input-text:focus {
-      outline: none; }
-  .input-btn.reverse {
+    .listComponent.reverse li {
+      height: 100%; }
+      .listComponent.reverse li a {
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow: hidden;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.02em; }
+  .listComponent.reverse-icon {
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;
     justify-content: space-between; }
-
-.input-number input {
-  outline: none; }
+    .listComponent.reverse-icon li {
+      height: 100%;
+      padding-left: 20px;
+      padding-right: 20px; }
+    .listComponent.reverse-icon .column {
+      flex-direction: column; }
+      .listComponent.reverse-icon .column a {
+        padding: 0; }
+  .listComponent-item, .listComponent-dropdown, .listComponent-megaMenu {
+    height: 100%; }
+    .listComponent-item a, .listComponent-dropdown a, .listComponent-megaMenu a {
+      height: 100%;
+      color: black;
+      font-size: 14px;
+      line-height: 24px;
+      text-decoration: none;
+      overflow: hidden; }
+      .listComponent-item a.white, .listComponent-dropdown a.white, .listComponent-megaMenu a.white {
+        color: white; }
+      .listComponent-item a.gray, .listComponent-dropdown a.gray, .listComponent-megaMenu a.gray {
+        color: #F2F2F2; }
+      .listComponent-item a:hover, .listComponent-dropdown a:hover, .listComponent-megaMenu a:hover {
+        color: #C38B20;
+        transition: 0.7s; }
+  .listComponent-dropdown {
+    position: relative; }
+    .listComponent-dropdown .dropdown-list {
+      display: none;
+      position: absolute;
+      margin-left: 20px;
+      top: 100%;
+      background: #f9f9f9; }
+      .listComponent-dropdown .dropdown-list li {
+        min-width: 200px;
+        margin-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px; }
+        .listComponent-dropdown .dropdown-list li a {
+          padding: 0; }
+          .listComponent-dropdown .dropdown-list li a:hover {
+            color: #C38B20;
+            transition: 0.7s; }
+    .listComponent-dropdown:hover {
+      transition: 0.7s; }
+      .listComponent-dropdown:hover .dropdown-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center; }
+  .listComponent-megaMenu .megaMenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    background: #f9f9f9;
+    width: 100%;
+    z-index: 1;
+    float: left; }
+    .listComponent-megaMenu .megaMenu h3 {
+      background: #C38B20;
+      padding: 16px;
+      color: white; }
+    .listComponent-megaMenu .megaMenu .row {
+      padding-left: 16px; }
+      .listComponent-megaMenu .megaMenu .row .listComponent {
+        padding-top: 15px; }
+        .listComponent-megaMenu .megaMenu .row .listComponent li {
+          padding-bottom: 5px; }
+          .listComponent-megaMenu .megaMenu .row .listComponent li a {
+            padding: 0; }
+  .listComponent-megaMenu:hover {
+    transition: 0.7s; }
+    .listComponent-megaMenu:hover .megaMenu {
+      display: block;
+      transition: 0.7s; }
+  .listComponent-icon a {
+    color: black;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    padding-left: 10px; }
+    .listComponent-icon a.white {
+      color: white; }
+    .listComponent-icon a.gray {
+      color: #F2F2F2; }
+    .listComponent-icon a:hover {
+      color: #C38B20;
+      transition: 0.7s; }
 
 @media (min-width: 992px) {
   .HomeBanner .owl-stage {

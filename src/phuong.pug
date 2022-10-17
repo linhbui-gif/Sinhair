@@ -1,10 +1,19 @@
 extends includes/layouts/Layout.pug
 
 block pages
-    +inputComponent({className: 'border-radius-1 font-placeholder', placeholder: 'Nhập email đăng ký'})
+    
+    //- +listComponent({array: dataListItem, styleLinkClass: 'font-weight', className: 'reverse'})
+    //- +listComponent({array: dataListItem, styleLinkClass: 'font-weight', className: 'reverse-icon',  icon: '../assets/icons/box.svg'})
+    //- +listComponent({array: dataListItem, styleLinkClass: 'font-weight', className: 'reverse', hasDropdown: true})
+    //- +listComponent({array: dataListItem, styleLinkClass: 'font-weight', className: 'reverse', megaMenu: true, heading: 'Mega Menu', title1 : 'Category 1', title2 : 'Category 2', title3: 'Category 3'})
+    
+    +listComponent({array: [{title: 'Trang chủ', link: 'home.html'},{title: 'Dầu gội', link: '#'},{title: 'Combo sản phẩm', link: '#'}, {title: 'Tin tức', link: '#'},{title: 'Liên hệ', link: '#'}, {title: 'Thông tin đại lý', link: '#'}], styleLinkClass: 'font-weight', className: 'reverse'})
 
-    +inputComponent({className: 'border-gray font-placeholder reverse', placeholder: 'Nhập email đăng ký', icon: '../assets/icons/box.svg'})
+    +listComponent({array: [{title: 'Trang chủ', link: 'home.html'},{title: 'Dầu gội', link: '#'},{title: 'Combo sản phẩm', link: '#'}, {title: 'Tin tức', link: '#'},{title: 'Liên hệ', link: '#'}, {title: 'Thông tin đại lý', link: '#'}], styleLinkClass: 'font-weight', className: 'reverse-icon', icon: '../assets/icons/box.svg'})
 
-    +inputComponent({className: 'font-placeholder yellow reverse', placeholder: 'Nhập email đăng ký', button: true, title: 'Button'})
+    +listComponent({array: [{title: 'Trang chủ', link: 'home.html'},{title: 'Dầu gội', link: '#'},{title: 'Combo sản phẩm', link: '#'}, {title: 'Tin tức', link: '#'},{title: 'Liên hệ', link: '#'}, {title: 'Thông tin đại lý', link: '#'}], styleLinkClass: 'font-weight', className: 'reverse', hasDropdown: true})
 
-    +inputComponent({className: 'font-placeholder yellow', type: 'number', number:true, min: '1', max: '5'})
+    //- +listComponent({array: [{title: 'Trang chủ', link: 'home.html'},{title: 'Dầu gội', link: '#'},{title: 'Combo sản phẩm', link: '#'}, {title: 'Tin tức', link: '#'},{title: 'Liên hệ', link: '#'}, {title: 'Thông tin đại lý', link: '#'}], styleLinkClass: 'font-weight', className: 'reverse', megaMenu: true, heading: 'Mega Menu', title1 : 'Category 1', title2 : 'Category 2', title3: 'Category 3'})
+
+
+    

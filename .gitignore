@@ -9,6 +9,8 @@
 /coverage
 /src/assets/css/main.css
 /src/home.html
+/src/*.html
+/src/assets/css/main.css
 # production
 
 # misc

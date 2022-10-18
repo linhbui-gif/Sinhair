@@ -1,1 +1,52 @@
-mixin cardComponent( { className = '', type = '', styleLinkClass, isImage, array = [] } )
+mixin cardComponent({ borderImage,borderCard,className, title, desc, tag , src, circle,hasDescription,borderRadius,isImage,price,prices,price1,desc1, hasFooter,fontsizeDesc,fontweightDesc,fontsizeDesc1,fontweightDesc1,fontsizeDesc2,fontweightDesc2 ,fontsizeTitle,fontweightTitle,fontsizeTitle1,fontweightTitle1,fontsizeTitle2,fontweightTitle2,fontsizePrice,fontweightPrice,fontsizePrice1,fontweightPrice1,fontsizePrices,fontweightPrices,array = [] })
+    if borderImage
+        .Card-component(class=`${className ? className : className}`)
+            .Card-component-top(class=`${borderRadius ? borderRadius : ''}`)
+                .Card-component-top-image
+                    a(href="BlogDetail.html" title="")
+                        img(src=`${src}` alt=`${alt ? alt : ''}` class=`${circle ? circle : ''}`)
+            .Card-component-body
+              
+                .Card-component-body-content
+                     h3.Card-component-body-content-title
+                         a(href="#" title="" class=`${fontsizeTitle ? fontsizeTitle : ''}${' '}${fontweightTitle ? fontweightTitle : ''}`)=title
+                if hasFooter    
+                    .Card-component-body-footer
+                    
+                        .Card-footer-information
+                            .information-price
+                             p(class=`${fontsizePrice ? fontsizePrice : ''}${' '}${fontweightPrice ? fontweightPrice : ''}`)=price
+                            .information-star
+                                
+                                p(class=`${fontsizePrices ? fontsizePrices : ''}${' '}${fontweightPrices ? fontweightPrices : ''}`)=prices
+                                span 
+                                    i.fa.fa-star
+                else 
+                    .Card-component-body-information
+                        .information-content
+                            p(class=`${fontsizePrice1 ? fontsizePrice1 : ''}${' '}${fontweightPrice1 ? fontweightPrice1 : ''}`)=price1 
+                            p(class=`${fontsizeDesc1 ? fontsizeDesc1 : ''}${' '}${fontweightDesc1 ? fontweightDesc1 : ''}`)=desc1
+    else if borderCard
+        .Card-component(class=`${className ? className : className}`)
+            .Card-component-top
+                .Card-component-top-image
+                    a(href="BlogDetail.html" title="")
+                        img(src=`${src}` alt=`${alt ? alt : ''}` class=`${circle ? circle : ''}`)
+            .Card-component-body
+                .Card-component-body-content
+                     h3.Card-component-body-content-title
+                         a(href="#" title="" class=`${fontsizeTitle1 ? fontsizeTitle1 : ''}${' '}${fontweightTitle1 ? fontweightTitle1 : ''}`)=title
+                     p.Card-component-body-content-description(class=`${fontsizeDesc2 ? fontsizeDesc2 : ''}${' '}${fontweightDesc2 ? fontweightDesc2 : ''}`)=desc
+          
+    else
+        .Card-component(class=`${className ? className : className}`)
+            .Card-component-top
+                .Card-component-top-image
+                    a(href="#" title="")
+                        img(src=`${src}` alt=`${alt ? alt : ''}` class=`${circle ? circle : ''}`)
+            .Card-component-body
+                .Card-component-body-coDesc
+                    h3.Card-component-body-content-title
+                        a(href="#" title="" class=`${fontsizeTitle2 ? fontsizeTitle2 : ''}${' '}${fontweightTitle2 ? fontweightTitle2 : ''}`)=title
+                    p.Card-component-body-content-description(class=`${fontsizeDesc ? fontsizeDesc : ''}${' '}${fontweightDesc ? fontweightDesc : ''}`)=desc
+

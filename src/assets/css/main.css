@@ -3067,105 +3067,116 @@ form input[type="text"], form input[type="number"], form input[type="tel"], form
     font-weight: 700;
     line-height: 18.75px; }
 
-.font-weight {
+.border-1 {
+  border: 2px solid #E0E0E0; }
+
+.border-radius-1 {
+  border-radius: 2px; }
+
+.border-radius-3 {
+  border-radius: 6px; }
+
+.fontsize-7 {
+  font-size: 14px; }
+
+.fontsize-8 {
+  font-size: 16px; }
+
+.fontsize-9 {
+  font-size: 18px; }
+
+.fontsize-11 {
+  font-size: 22px; }
+
+.fontsize-12 {
+  font-size: 24px; }
+
+.fontsize-16 {
+  font-size: 32px; }
+
+.fontweight400 {
   font-weight: 400; }
 
-.listComponent {
-  margin: 0;
-  position: relative; }
-  .listComponent.reverse {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    .listComponent.reverse li {
-      height: 100%; }
-      .listComponent.reverse li a {
-        padding-left: 20px;
-        padding-right: 20px;
-        overflow: hidden;
-        font-size: 16px;
-        line-height: 19px;
-        letter-spacing: 0.02em; }
-  .listComponent.reverse-icon {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    .listComponent.reverse-icon li {
-      height: 100%;
-      padding-left: 20px;
-      padding-right: 20px; }
-    .listComponent.reverse-icon .column {
-      flex-direction: column; }
-      .listComponent.reverse-icon .column a {
-        padding: 0; }
-  .listComponent-item, .listComponent-dropdown, .listComponent-megaMenu {
-    height: 100%; }
-    .listComponent-item a, .listComponent-dropdown a, .listComponent-megaMenu a {
-      height: 100%;
-      color: black;
-      font-size: 14px;
-      line-height: 24px;
-      text-decoration: none;
-      overflow: hidden; }
-      .listComponent-item a.white, .listComponent-dropdown a.white, .listComponent-megaMenu a.white {
-        color: white; }
-      .listComponent-item a.gray, .listComponent-dropdown a.gray, .listComponent-megaMenu a.gray {
-        color: #F2F2F2; }
-      .listComponent-item a:hover, .listComponent-dropdown a:hover, .listComponent-megaMenu a:hover {
+.fontweight600 {
+  font-weight: 600; }
+
+.fontweight700 {
+  font-weight: 700; }
+
+.fontweight900 {
+  font-weight: 900; }
+
+.Card-component {
+  background: aqua;
+  border-radius: 6px; }
+  .Card-component-top-image a {
+    text-decoration: none; }
+    .Card-component-top-image a img {
+      width: 100%; }
+  .Card-component-body {
+    margin-top: 10px;
+    padding: 9px 24px 9px 24px; }
+    .Card-component-body-content-title {
+      margin-bottom: 0; }
+      .Card-component-body-content-title a {
+        color: #333333; }
+    .Card-component-body-content-description {
+      line-height: 1.5;
+      margin-bottom: 0; }
+  .Card-component.borderImage {
+    border-radius: 0; }
+    .Card-component.borderImage .Card-component-top {
+      border: 2px solid #E0E0E0;
+      padding: 8px; }
+    .Card-component.borderImage .Card-component-body-information {
+      margin-top: 16px; }
+      .Card-component.borderImage .Card-component-body-information .information-content p:first-child {
+        color: #C38B20; }
+      .Card-component.borderImage .Card-component-body-information .information-content p:last-child {
+        color: #4F4F4F; }
+    .Card-component.borderImage .Card-component-body-footer .Card-footer-information {
+      display: flex;
+      justify-content: space-between; }
+      .Card-component.borderImage .Card-component-body-footer .Card-footer-information .information-price p {
         color: #C38B20;
-        transition: 0.7s; }
-  .listComponent-dropdown {
-    position: relative; }
-    .listComponent-dropdown .dropdown-list {
-      display: none;
-      position: absolute;
-      margin-left: 20px;
-      top: 100%;
-      background: #f9f9f9; }
-      .listComponent-dropdown .dropdown-list li {
-        min-width: 200px;
-        margin-left: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px; }
-        .listComponent-dropdown .dropdown-list li a {
-          padding: 0; }
-          .listComponent-dropdown .dropdown-list li a:hover {
-            color: #C38B20;
-            transition: 0.7s; }
-    .listComponent-dropdown:hover {
-      transition: 0.7s; }
-      .listComponent-dropdown:hover .dropdown-list {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center; }
-  .listComponent-megaMenu .megaMenu {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 30px;
-    background: #f9f9f9;
-    width: 100%;
-    z-index: 1;
-    float: left; }
-    .listComponent-megaMenu .megaMenu h3 {
-      background: #C38B20;
-      padding: 16px;
-      color: white; }
-    .listComponent-megaMenu .megaMenu .row {
-      padding-left: 16px; }
-      .listComponent-megaMenu .megaMenu .row .listComponent {
-        padding-top: 15px; }
-        .listComponent-megaMenu .megaMenu .row .listComponent li {
-          padding-bottom: 5px; }
-          .listComponent-megaMenu .megaMenu .row .listComponent li a {
-            padding: 0; }
-  .listComponent-megaMenu:hover {
-    transition: 0.7s; }
-    .listComponent-megaMenu:hover .megaMenu {
-      display: block;
-      transition: 0.7s; }
-  .listComponent-icon a {
-    color: black;
+        margin-bottom: 0px; }
+      .Card-component.borderImage .Card-component-body-footer .Card-footer-information .information-star {
+        display: flex; }
+        .Card-component.borderImage .Card-component-body-footer .Card-footer-information .information-star p {
+          margin-right: 8px;
+          color: #333333;
+          margin-bottom: 0; }
+        .Card-component.borderImage .Card-component-body-footer .Card-footer-information .information-star span {
+          display: flex;
+          align-items: baseline; }
+        .Card-component.borderImage .Card-component-body-footer .Card-footer-information .information-star i {
+          margin-top: 5px;
+          color: #C38B20; }
+  .Card-component.borderCard {
+    background-color: #EFEFEF;
+    border-radius: 0; }
+    .Card-component.borderCard .Card-component-top {
+      padding: 8px; }
+    .Card-component.borderCard .Card-component-body {
+      text-align: center;
+      padding-bottom: 21px; }
+      .Card-component.borderCard .Card-component-body-content-title {
+        margin-bottom: 0; }
+        .Card-component.borderCard .Card-component-body-content-title a {
+          color: #333333; }
+      .Card-component.borderCard .Card-component-body-content-description {
+        line-height: 1.5;
+        color: #4F4F4F;
+        margin-bottom: 0; }
+
+.Input-group {
+  border: 1px solid #BDBDBD;
+  display: flex;
+  align-items: center; }
+  .Input-group input {
+    border-top-style: hidden;
+    border-bottom-style: hidden;
+    height: 20px;
     font-size: 14px;
     line-height: 24px;
     text-decoration: none;

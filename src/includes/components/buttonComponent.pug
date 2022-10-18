@@ -6,7 +6,6 @@
 //-   link?: string,
 //-   classCustom? : br-4, text-uppercase
 
-
 mixin buttonComponent( { className = '', type = 'button',size='',styleType = 'primary',title,dataToggle, dataTarget,link,classCustom }={} )
     .button(class=`${className} ${size} ${styleType}`)
         if link

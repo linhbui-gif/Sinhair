@@ -1,0 +1,22 @@
+//-   className?: string,
+//-   type?: 'button' | 'submit' | 'reset',
+//-   size?: 'btn-sm' | 'btn-md' | 'btn-md-l' | 'btn-l-sm'| 'btn-l'| 
+//-   styleType?: primary , dark , white
+//-   title?: string,
+//-   link?: string,
+//-   classCustom? : br-4, text-uppercase
+
+
+mixin buttonComponent( { className = '', type = 'button',size='',styleType = 'primary',title,dataToggle, dataTarget,link,classCustom }={} )
+    .button(class=`${className} ${size} ${styleType}`)
+        if link
+            a(href=`${link}` class=`${classCustom ? classCustom:''}` dataTarget=`${dataTarget ? dataTarget: ''}` dataToggle=`${dataToggle ? dataToggle:''}`).button__control.d-flex.align-items-center.justify-content-center
+                .button__control-title
+                    = title
+                    block title
+
+        else
+            button(type=`${type}` class=`${classCustom ? classCustom:''}` dataTarget=`${dataTarget ? dataTarget: ''}` dataToggle=`${dataToggle ? dataToggle:''}`).button__control.d-flex.align-items-center.justify-content-center
+                .button__control-title
+                    = title
+                    block title

@@ -1,0 +1,48 @@
+//- styleLinkClass: style css a
+//- className: reverse (dùng cho không có icon)
+//-             reverse-icon (có icon)
+//-                 +ngang (default)
+//-                 + column (dọc: icon trên, title dưới)
+mixin listComponent({className = '', column = '', styleLinkClass, icon, array = [], hasDropdown, megaMenu, heading, title1, title2, title3})
+    ul.listComponent(class=`${className ? className : ''}`)
+        each item in array
+            if icon
+                li.listComponent-icon.d-flex.align-items-center.justify-content-between(class=`${column}`)
+                    img(src=`${icon}` alt="")
+                    a(href=`${item.link}` class=`${styleLinkClass ? styleLinkClass : ''}`)= item.title
+            else if hasDropdown 
+                li.listComponent-dropdown(class=`${hasDropdown ? hasDropdown : ''}`)
+                    a(href=`${item.link}` class=`${styleLinkClass ? styleLinkClass : ''}`)= item.title
+                        +listComponent({array: [{title: 'Trang chủ', link: 'home.html'},{title: 'Dầu gội', link: '#'},{title: 'Combo sản phẩm', link: '#'}, {title: 'Tin tức', link: '#'},{title: 'Liên hệ', link: '#'}, {title: 'Thông tin đại lý', link: '#'}], styleLinkClass: 'font-weight', className: 'dropdown-list'})
+
+                        //- +listComponent({array: dataListItem, styleLinkClass: 'font-weight', className: 'dropdown-list'})
+            else if megaMenu 
+                li.listComponent-megaMenu(class=`${hasDropdown ? hasDropdown : ''}`)
+                    a(href=`${item.link}` class=`${styleLinkClass ? styleLinkClass : ''}`)= item.title
+                    .megaMenu 
+                        h3= heading
+                        .row 
+                            .col-lg-4
+                                h4= title1
+                                +listComponent({array: [{title: 'Trang chủ', link: 'home.html'},{title: 'Dầu gội', link: '#'},{title: 'Combo sản phẩm', link: '#'}, {title: 'Tin tức', link: '#'},{title: 'Liên hệ', link: '#'}, {title: 'Thông tin đại lý', link: '#'}], styleLinkClass: 'font-weight'})   
+
+                                //- +listComponent({array: dataListItem, styleLinkClass: 'font-weight'})
+                            .col-lg-4
+                                h4= title2
+                                +listComponent({array: [{title: 'Trang chủ', link: 'home.html'},{title: 'Dầu gội', link: '#'},{title: 'Combo sản phẩm', link: '#'}, {title: 'Tin tức', link: '#'},{title: 'Liên hệ', link: '#'}, {title: 'Thông tin đại lý', link: '#'}], styleLinkClass: 'font-weight'})   
+
+                                //- +listComponent({array: dataListItem, styleLinkClass: 'font-weight'})
+                            .col-lg-4
+                                h4= title3
+                                +listComponent({array: [{title: 'Trang chủ', link: 'home.html'},{title: 'Dầu gội', link: '#'},{title: 'Combo sản phẩm', link: '#'}, {title: 'Tin tức', link: '#'},{title: 'Liên hệ', link: '#'}, {title: 'Thông tin đại lý', link: '#'}], styleLinkClass: 'font-weight'})   
+                                
+                                //- +listComponent({array: dataListItem, styleLinkClass: 'font-weight'})
+
+            else
+                li.listComponent-item(class=`${hasDropdown ? hasDropdown : ''}`)
+                    a(href=`${item.link}` class=`${styleLinkClass ? styleLinkClass : ''}`)= item.title
+                                    
+                        
+                    
+
+            

@@ -1,0 +1,21 @@
+extends includes/layouts/Layout.pug
+
+block pages
+    
+    //- +listComponent({array: dataListItem, styleLinkClass: 'font-weight', className: 'reverse'})
+    //- +listComponent({array: dataListItem, styleLinkClass: 'font-weight', className: 'reverse-icon',  icon: '../assets/icons/box.svg'})
+    //- +listComponent({array: dataListItem, styleLinkClass: 'font-weight', className: 'reverse', hasDropdown: true})
+    //- +listComponent({array: dataListItem, styleLinkClass: 'font-weight', className: 'reverse', megaMenu: true, heading: 'Mega Menu', title1 : 'Category 1', title2 : 'Category 2', title3: 'Category 3'})
+    
+    +listComponent({array: [{title: 'Trang chủ', link: 'home.html'},{title: 'Dầu gội', link: '#'},{title: 'Combo sản phẩm', link: '#'}, {title: 'Tin tức', link: '#'},{title: 'Liên hệ', link: '#'}, {title: 'Thông tin đại lý', link: '#'}], styleLinkClass: 'font-weight', className: 'reverse'})
+
+    +listComponent({array: [{title: 'Trang chủ', link: 'home.html'},{title: 'Dầu gội', link: '#'},{title: 'Combo sản phẩm', link: '#'}, {title: 'Tin tức', link: '#'},{title: 'Liên hệ', link: '#'}, {title: 'Thông tin đại lý', link: '#'}], styleLinkClass: 'font-weight', className: 'reverse-icon', icon: '../assets/icons/box.svg'})
+
+    +listComponent({array: [{title: 'Trang chủ', link: 'home.html'},{title: 'Dầu gội', link: '#'},{title: 'Combo sản phẩm', link: '#'}, {title: 'Tin tức', link: '#'},{title: 'Liên hệ', link: '#'}, {title: 'Thông tin đại lý', link: '#'}], styleLinkClass: 'font-weight', className: 'reverse', hasDropdown: true})
+
+    //- +listComponent({array: [{title: 'Trang chủ', link: 'home.html'},{title: 'Dầu gội', link: '#'},{title: 'Combo sản phẩm', link: '#'}, {title: 'Tin tức', link: '#'},{title: 'Liên hệ', link: '#'}, {title: 'Thông tin đại lý', link: '#'}], styleLinkClass: 'font-weight', className: 'reverse', megaMenu: true, heading: 'Mega Menu', title1 : 'Category 1', title2 : 'Category 2', title3: 'Category 3'})
+
+
+    
+    +selectOptionComponent({array: selectOption, img: '../assets/icons/Chevron-down.svg', className: 'select-notIcon font-select-option'})
+    +selectOptionComponent({array: selectOption, img: '../assets/icons/Chevron-down.svg', className: 'select-hasIcon font-select-option', icon: '../assets/icons/layer-group.svg'})

@@ -1,0 +1,20 @@
+extends includes/layouts/Layout.pug
+
+block pages
+    .container.bg-success.mt-5.mb-5 
+        +carouselComponent({
+            hasButtonArrow:true,
+            src:'./assets/images/akiaso1.png',
+            titleName: 'Akaso Shop',
+            desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam'
+        })
+
+    .container-fluid.mb-5
+        +carouselComponent({
+            hasDots:true,
+            titleh2: 'TIN TỨC',
+            titleh1:'Drama là gì? Ý nghĩa của từ drama trên Facebook',
+            content:'Chắc hẳn mỗi chúng ta cũng từng nhìn thấy các thể loại phim drama, truyện tranh drama hay câu nói phổ biến của giới trẻ như hóng drama, hít drama, … trên các nền tảng mạng xã hội như Facebook, Instagram, … hay một website nào đó trên Internet. Vậy drama là gì mà được các bạn trẻ ưa chuộng đến thế.',
+            readmore:'Đọc tin'
+        })
+

@@ -6,6 +6,7 @@
 //include ../components/listComponent.pug
 //
 //include ../components/buttonComponent.pug
+include ../components/carouselComponent.pug
 doctype html
 html
     head
@@ -19,8 +20,11 @@ html
 
         link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css")
         //- CSS
+        
+        link(rel="stylesheet" type="text/css" href="./assets/css/library/owl.carousel.min.css")
+        link(rel="stylesheet" type="text/css" href="./assets/css/library/owl.theme.default.min.css")
+        
         link(rel="stylesheet" type="text/css" href="./assets/css/main.css")
-
         //- Favicon
         //- link(rel="icon" type="image/png" href="https://proxy6.net/static/img/favicon.png")
 
@@ -31,9 +35,14 @@ html
         include Navigation.pug
         main
           block pages
+       
           
         include Footer.pug
         //- Java Script
-        script(src="./assets/js/jquery.min.js")
+       
+        
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' crossorigin='anonymous')
+       
+        script(src="./assets/js/jquery.min.js")
+        script(src="./assets/js/owl.carousel.min.js")
         script(src="./assets/js/main.js")

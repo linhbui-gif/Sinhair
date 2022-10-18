@@ -1,0 +1,24 @@
+mixin selectOptionComponent({className = '', size = 'middle', icon, array = [], img})
+    .select(class=`${className ? className : ''}`)
+        if icon
+                .select-current.d-flex.align-items-center.justify-content-between
+                    .option.d-flex.align-items-center.justify-content-between
+                        i 
+                            img(src=`${icon}` alt="")
+                        p Chọn sản phẩm
+                    i.arrow
+                        img(src=`${img}` alt="")
+                ul.select-option
+                    each item in array
+                        li.select-option-list.d-flex.align-items-center
+                            i 
+                                img(src=`${icon}` alt="")
+                            p= item.title
+        else 
+            .select-current.d-flex.align-items-center.justify-content-between
+                p Chọn sản phẩm
+                img(src=`${img}` alt="")
+            ul.select-option 
+                each item in array
+                    li.select-option-list.d-flex.align-items-center.justify-content-between
+                        p= item.title

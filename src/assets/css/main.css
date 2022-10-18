@@ -3179,6 +3179,60 @@ form input[type="text"], form input[type="number"], form input[type="tel"], form
       color: #C38B20;
       transition: 0.7s; }
 
+.font-select-option {
+  font-weight: 400;
+  font-size: 14px; }
+
+.border-radius-1 {
+  border-radius: 4px; }
+
+.border-gray {
+  border: 1px solid #BDBDBD; }
+
+.select .select-current {
+  cursor: pointer;
+  border: 1px solid #BDBDBD; }
+  .select .select-current p {
+    margin: 0;
+    padding-top: 11px;
+    padding-left: 10px;
+    padding-bottom: 13px; }
+  .select .select-current img {
+    margin-right: 5px; }
+  .select .select-current:hover {
+    color: #C38B20; }
+
+.select .select-option {
+  display: none;
+  cursor: pointer;
+  border-left: 1px solid #BDBDBD;
+  border-right: 1px solid #BDBDBD;
+  border-bottom: 1px solid #BDBDBD; }
+  .select .select-option .select-option-list p {
+    margin: 0;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px; }
+  .select .select-option .select-option-list img {
+    margin-right: 5px; }
+  .select .select-option .select-option-list:hover {
+    color: #FFFFFF;
+    background: blue; }
+  .select .select-option.active {
+    display: block; }
+
+.select.select-hasIcon .select-current i {
+  margin-top: 13px;
+  margin-left: 14px;
+  margin-bottom: 13px;
+  border-right: 1px solid #E0E0E0; }
+
+.select.select-hasIcon .select-option-list i {
+  margin-top: 13px;
+  margin-left: 14px;
+  margin-bottom: 13px;
+  border-right: 1px solid #E0E0E0; }
+
 @media (min-width: 992px) {
   .HomeBanner .owl-stage {
     margin-left: -1px; } }
